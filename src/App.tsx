@@ -1,20 +1,60 @@
 import * as React from 'react';
+
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+import Paper from '@material-ui/core/Paper';
+
 import './App.css';
 
-import logo from './logo.svg';
+const theme = createMuiTheme({
+  palette: {
+      type: 'light',
+      primary: { main: '#00ff90' },
+      secondary: { main: '#042c4b' }
+  }
+});
+
+
+/*============ CLASS DEFINITION ============*/
 
 class App extends React.Component {
+
+  public state = {}
+
   public render() {
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h1 className='App-title'>Welcome to React</h1>
-        </header>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+
+      <MuiThemeProvider theme={theme}>
+
+        <div className='header-container'>
+          <header className='container-fluid'>
+
+            <div className='row'>
+
+              <div className='col col-sm-12 text-left'>
+                <h1>ATSNE - Anchored TSNE</h1>
+                <h2>Preserving spatial relationships via predefined anchor points</h2>
+              </div>
+
+            </div>
+          </header>
+        </div>
+
+        <div className='container-fluid'>
+          <div className='row'>
+
+
+            <div className='col col-sm-12'>
+              <Paper>
+                <h3>Stuff</h3>
+              </Paper>
+            </div>
+
+          </div>
+        </div>
+
+      </MuiThemeProvider>
     );
   }
 }

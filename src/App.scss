@@ -1,0 +1,74 @@
+@import 'scss/_required.scss';
+
+// Main styling
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 30px;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: $appBlueDark;
+}
+h4 {
+    font-size: 1.1em;
+}
+
+.header-container {
+    padding: 30px;
+    background: $appBlueDark;
+    margin-bottom: 30px;
+    box-shadow: 5px 0px 15px 0px rgba(0,0,0, 0.75);
+    position: relative;
+}
+
+header {
+    text-transform: uppercase;
+    text-align: center;
+
+    h1 {
+        color: #fff;
+        font-size: 30px;
+        letter-spacing: 9px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-weight: 300;
+    }
+
+    h2 {
+        font-size: 24px;
+        color: $appGreen;
+        opacity: .9;
+        text-transform: lowercase;
+        letter-spacing: 6px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+button {
+    outline: none;
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+
+.icon-right {
+    margin-left: 8px;
+}
+.icon-left {
+    margin-right: 8px;
+}
+
+@include media-breakpoint-between(sm, md) {}
+@include media-breakpoint-between(xs, sm) {}
