@@ -18,6 +18,7 @@
       "ordered-imports": false,
       "member-ordering": false,
       "object-literal-sort-keys": false,
-      "max-classes-per-file": false
+      "max-classes-per-file": false,
+      "no-console": false
   }
 }

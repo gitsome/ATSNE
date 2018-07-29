@@ -16,8 +16,8 @@ limitations under the License.
 // import * as logging from './logging.js';
 
 import * as THREE from 'three';
-import { DataPoint } from './data.js';
-import { Point2D } from './vector.js';
+import { DataPoint } from './data';
+import { Point2D } from './vector';
 
 /**
  * Delay for running expensive tasks, in milliseconds.

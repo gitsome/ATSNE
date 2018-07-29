@@ -13,11 +13,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-import { SpriteMetadata } from './data-provider.js';
-import * as util from './util.js';
-import { centroid, cosDistNorm, dot, norm2, sub, unit, Vector } from './vector.js';
-import { TSNE } from './bh_tsne.js';
-import { NearestEntry, findKNNofPoint, findKNNGPUCosine, findKNN } from './knn.js';
+import { SpriteMetadata } from './data-provider';
+import * as util from './util';
+import { centroid, cosDistNorm, dot, norm2, sub, unit, Vector } from './vector';
+import { TSNE } from './bh_tsne';
+import { NearestEntry, findKNNofPoint, findKNNGPUCosine, findKNN } from './knn';
 
 export type DistanceFunction = (a: Vector, b: Vector) => number;
 export type ProjectionComponents3D = [string, string, string];

@@ -14,7 +14,7 @@ limitations under the License.
 ==============================================================================*/
 
 import * as d3 from 'd3';
-import {assert} from './util.js';
+import {assert} from './util';
 
 /**
  * @fileoverview Useful vector utilities.

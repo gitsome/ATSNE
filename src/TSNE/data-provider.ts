@@ -13,8 +13,8 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-import { ColumnStats, DataPoint, DataSet, PointMetadata, SpriteAndMetadataInfo } from './data.js';
-import * as util from './util.js';
+import { ColumnStats, DataPoint, DataSet, PointMetadata, SpriteAndMetadataInfo } from './data';
+import * as util from './util';
 
 /** Maximum number of colors supported in the color map. */
 const NUM_COLORS_COLOR_MAP = 50;
@@ -152,14 +152,20 @@ export function parseTensors(
     content: ArrayBuffer, valueDelim = '\t'): Promise<DataPoint[]> {
     // logging.setModalMessage('Parsing tensors...', TENSORS_MSG_ID);
 
-    return new Promise<DataPoint[]>((resolve, reject) => {
+    console.log('content:', content);
+
+    return new Promise<DataPoint[]>((resolve) => {
+        
         const data: DataPoint[] = [];
         let numDim: number;
 
         streamParse(content, (line: string) => {
+
+            console.log('line:', valueDelim);
+
             line = line.trim();
             if (line === '') {
-            return;
+                return;
             }
             const row = line.split(valueDelim);
             const dataPoint: DataPoint = {
@@ -181,11 +187,11 @@ export function parseTensors(
             }
             if (numDim !== dataPoint.vector.length) {
                 // logging.setModalMessage('Parsing failed. Vector dimensions do not match');
-                throw Error('Parsing failed');
+                throw Error('Parsing failed. Vector dimensions do not match');
             }
             if (numDim <= 1) {
                 // logging.setModalMessage('Parsing failed. Found a vector with only one dimension?');
-                throw Error('Parsing failed');
+                throw Error('Parsing failed. Found a vector with only one dimension?');
             }
         }).then(() => {
             // logging.setModalMessage(null, TENSORS_MSG_ID);

@@ -12,9 +12,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-import * as util from './util.js';
-import { toTypedArray, cosDistNorm, Vector } from './vector.js';
-import { KMin } from './heap.js';
+import * as util from './util';
+import { toTypedArray, cosDistNorm, Vector } from './vector';
+import { KMin } from './heap';
 
 export interface NearestEntry {
     index: number;

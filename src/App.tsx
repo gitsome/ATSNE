@@ -7,6 +7,8 @@ import Paper from '@material-ui/core/Paper';
 
 import './App.css';
 
+import ATSNE from './components/ATSNE/ATSNE';
+
 const theme = createMuiTheme({
   palette: {
       type: 'light',
@@ -34,7 +36,7 @@ class App extends React.Component {
 
               <div className='col col-sm-12 text-left'>
                 <h1>ATSNE - Anchored TSNE</h1>
-                <h2>Preserving spatial relationships via predefined anchor points</h2>
+                <h2>Preserving spatial relationships between runs using anchor points</h2>
               </div>
 
             </div>
@@ -47,7 +49,7 @@ class App extends React.Component {
 
             <div className='col col-sm-12'>
               <Paper>
-                <h3>Stuff</h3>
+                <ATSNE/>
               </Paper>
             </div>
 
